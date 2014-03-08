@@ -1,4 +1,11 @@
 SimpleRailsApp::Application.routes.draw do
+  get "users/signup"
+  get "users/login"
+  get "users/edit"
+  get "users/forgot_password"
+  get "users/change_password"
+  get "users/welcome"
+  get "users/hidden"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
