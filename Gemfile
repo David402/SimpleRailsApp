@@ -8,7 +8,10 @@ gem 'sinatra', '1.3.6'            # Cannot upgrade to 1.4 yet, `task` issue
 gem 'sinatra-contrib'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+
+# Use Postgres as the database for Active Record (Heroku only aceept this)
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
