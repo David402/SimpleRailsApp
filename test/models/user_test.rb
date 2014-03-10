@@ -8,7 +8,7 @@ class UserTest < ActiveSupport::TestCase
   fixtures :users
 
   def test_auth
-  	# check that we can username we a valid user 
+  	# check that we can login we a valid user 
     assert_equal  @bob, User.authenticate("bob", "test")
     #wrong username
     assert_nil    User.authenticate("nonbob", "test")

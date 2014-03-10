@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# Use Sinatra for API routes handling
+gem 'sinatra', '1.3.6'            # Cannot upgrade to 1.4 yet, `task` issue
+gem 'sinatra-contrib'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
@@ -43,3 +47,12 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# =============================================================
+# External providers
+# =============================================================
+
+# HTTP Client
+gem 'rest-core'
+gem 'rest-more'
+gem 'multipart-post'

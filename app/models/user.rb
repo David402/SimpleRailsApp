@@ -30,7 +30,9 @@ class User < ActiveRecord::Base
 
 	def password= pass
 		@password=pass
+		puts "pass #{pass}"
 		self.salt = User.random_string(10) if !self.salt?
+		puts "salt #{self.salt}"
 		self.hashed_password = User.encrypt(@password, self.salt)
 	end
 	
@@ -44,7 +46,7 @@ class User < ActiveRecord::Base
 		# Save user model with new password into DB
 		self.save
 
-		# Notifications.deliver_forgot_password(self.email, self.username, new_pass)
+		UserMailer.password_reset(self)
 	end
 	def self.authenticate(username, pass)
 		u = find{ |u| u.username == username }
